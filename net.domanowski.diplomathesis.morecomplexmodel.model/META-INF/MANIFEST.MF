@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: net.domanowski.diplomathesis.morecomplexmodel.model;singleton:=true
+Automatic-Module-Name: net.domanowski.diplomathesis.morecomplexmodel.model
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: net.domanowski.diplomathesis.morecomplexmodel.model.morecomplexmodel,
+ net.domanowski.diplomathesis.morecomplexmodel.model.morecomplexmodel.impl,
+ net.domanowski.diplomathesis.morecomplexmodel.model.morecomplexmodel.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="evaluationDescription" version="12.0.0.2017041100">
+  <ownedViewpoints name="Viewpoint" modelFileExtension="morecomplexmodel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="DiagramDescription" domainClass="morecomplexmodel::Model" enablePopupBars="true">
+      <metamodel href="../../net.domanowski.diplomathesis.morecomplexmodel.model/model/morecomplexmodel.ecore#/"/>
+      <defaultLayer name="defaultLayer">
+        <nodeMappings name="EllipseMapping" domainClass="morecomplexmodel::EllipseNode">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="feature:label" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="RectangleMapping" domainClass="morecomplexmodel::RectangleNode">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:label" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="NextRectangleMapping" sourceMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='EllipseMapping']" targetMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='RectangleMapping']" targetFinderExpression="feature:nextRectangle">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="NextEllipseMapping" sourceMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='RectangleMapping']" targetMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='EllipseMapping']" targetFinderExpression="feature:nextEllipse">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EllipseSiblingsMapping" sourceMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='EllipseMapping']" targetMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='EllipseMapping']" targetFinderExpression="feature:ellipseSiblings">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="RectangleSiblingsMapping" sourceMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='RectangleMapping']" targetMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='RectangleMapping']" targetFinderExpression="feature:rectangleSiblings">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="creationSection">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="EllipseCreationTool" nodeMappings="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='EllipseMapping']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="morecomplexmodel::EllipseNode" referenceName="nodes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="RectangleCreationTool" nodeMappings="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='RectangleMapping']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="morecomplexmodel::RectangleNode" referenceName="nodes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="EllipseSiblingsMapping" edgeMappings="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@edgeMappings[name='EllipseSiblingsMapping']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="ellipseSiblings" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="RectangleSiblingsMapping" edgeMappings="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@edgeMappings[name='RectangleSiblingsMapping']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="rectangleSiblings" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="NextRectangleMapping" edgeMappings="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@edgeMappings[name='NextRectangleMapping']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="nextRectangle" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="NextEllipseMapping" edgeMappings="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@edgeMappings[name='NextEllipseMapping']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="nextEllipse" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="net.domanowski.diplomathesis.morecomplexmodel.description.Services"/>
+  </ownedViewpoints>
+</description:Group>

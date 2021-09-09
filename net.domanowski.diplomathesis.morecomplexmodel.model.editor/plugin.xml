@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated morecomplexmodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="net.domanowski.diplomathesis.morecomplexmodel.model.morecomplexmodel.presentation.MorecomplexmodelModelWizardID"
+            name="%_UI_MorecomplexmodelModelWizard_label"
+            class="net.domanowski.diplomathesis.morecomplexmodel.model.morecomplexmodel.presentation.MorecomplexmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MorecomplexmodelModelFile.gif">
+         <description>%_UI_MorecomplexmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated morecomplexmodel -->
+      <editor
+            id="net.domanowski.diplomathesis.morecomplexmodel.model.morecomplexmodel.presentation.MorecomplexmodelEditorID"
+            name="%_UI_MorecomplexmodelEditor_label"
+            icon="icons/full/obj16/MorecomplexmodelModelFile.gif"
+            extensions="morecomplexmodel"
+            class="net.domanowski.diplomathesis.morecomplexmodel.model.morecomplexmodel.presentation.MorecomplexmodelEditor"
+            contributorClass="net.domanowski.diplomathesis.morecomplexmodel.model.morecomplexmodel.presentation.MorecomplexmodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
