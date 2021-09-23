@@ -8,14 +8,14 @@
           <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="feature:label" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="RectangleMapping" domainClass="morecomplexmodel::RectangleNode">
           <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:label" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
         <edgeMappings name="NextRectangleMapping" sourceMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='EllipseMapping']" targetMapping="//@ownedViewpoints[name='Viewpoint']/@ownedRepresentations[name='DiagramDescription']/@defaultLayer/@nodeMappings[name='RectangleMapping']" targetFinderExpression="feature:nextRectangle">
