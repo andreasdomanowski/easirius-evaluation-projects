@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="morecomplexmodel" nsURI="http://www.domanowski.net/morecomplexmodel"
+    nsPrefix="morecomplexmodel">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//AbstractNode" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractNode" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inheritedHiddenAttribute"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EllipseNode" eSuperTypes="#//AbstractNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextRectangle" eType="#//RectangleNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ellipseSiblings" upperBound="-1"
+        eType="#//EllipseNode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hiddenEllipseAttribute"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RectangleNode" eSuperTypes="#//AbstractNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextEllipse" eType="#//EllipseNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rectangleSiblings" upperBound="-1"
+        eType="#//RectangleNode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hiddenRectangleAttribute"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
